@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/botstrap.css">
+    <script>
+        function VerifyPassword(){
+            var meter=document.querySelector("meter");
+            var password=document.getElementbyId("txtPwd").value;
+            var regExp=/(?=.*[A-Z])\w{4,10}/;
+            if(password.match(regExp)){
+                meter.value=100;
+            }else {
+                if(password.length<4){
+                    meter.value=30;
+                }else {
+                    meter.value=70;
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid p-4">
+    <dl class="w-25">
+        <dt>Your password</dt>
+        <dd><input type="passwword" onkeyup="VerifyPassword()" id="txtPwd" class="form-control">
+            <dd><meter class="w-100" min="1" max="100" style="height:25px"></meter></dd>
+    </dl>
+</body>
+</html>

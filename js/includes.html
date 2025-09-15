@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>8
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Search(){
+            var topics=document.getElementByTagName("li");
+            var searchString=document.getElementById("txtSearch").value;
+            for(var topic of topics){
+                if(topic.textcontent.includes(searchString)){
+                    topic.style.display="block";
+                }else {
+                    topic.style.display="none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtSearch" onkeyup="Search()" placeholder="Search Topic">
+    <ol>
+        <li>HTML Projects</li>
+        <li>React Projects</li>
+        <li>CSS Examples</li>
+        <li>React Examples</li>
+        <li>JavaScript Tutorial</li>
+        <li>HTML Tutorial</li>
+    </ol>
+</body>
+</html>

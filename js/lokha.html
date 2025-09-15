@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../src/scripts/inox.js"></script>
+</head>
+<body>
+    <button id="btnbook" data-bs-toggle="modal" class="btn btn-warning m-2">Book Show</button>
+    <div class="modal fade" id="show">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="quick">Quick Booking</h3>
+                    <div class="btn btn-close" data-bs-dismiss="modal"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <select class="form-select" id="1stMovies">
+                            <option>Select Movies</option>
+                            <option>MAHAVATAR NARSIMHA</option>
+                            <option>COOLIE</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select" id="1stDate">
+                            <option>Select Date</option>
+                            <option>Today, 1 Sep</option>
+                            <option>Tommorrow, 2 Sep</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select" id="1stCinema">
+                            <option>Select Cinema</option>
+                            <option>PVR Ameerpet</option>
+                            <option>INOX Hyderabad</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select" id="1stTime">
+                            <option>Select Time</option>
+                            <option>5:30 AM</option>
+                            <option>7:00 PM</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="booking" class="btn btn-warning" onclick="Bookload()" data-bs-dismiss="modal">Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card w-50 p-3" style="display: none;" id="summary-container">
+        <div class="card-header d-flex justify-content-between">
+            <h2 class="bi bi-ticket-detailed"><b>Booking Summary</b></h2>
+            <button data-bs-target="#show" data-bsb-toggle="modal" onclick="EditClick()" class="bi bi-pen-fill btn btn-warning">Edit</button>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <img width="100%" height="200" id="poster">
+                </div>
+                <div class="col-8">
+                    <dl class="row">
+                        <dt class="col-6 my-2">Movies Name</dt>
+                        <dd class="col-6 my-2" id="lblMovies"></dd>
+                        <dt class="col-6 my-2">Date</dt>
+                        <dd class="col-6 my-2" id="lblDate"></dd>
+                        <dt class="col-6 my-2">Cinema</dt>
+                        <dd class="col-6 my-2" id="lblCinema"></dd>
+                        <dt class="col-6 my-2">Time</dt>
+                        <dd class="col-6 my-2" id="lblTime"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-warning w-100" href="/public/images/loka.avif"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

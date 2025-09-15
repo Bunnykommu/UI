@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ApplyClick(){
+            var size=parseInt(document.getElementById("txtFontSize").value);
+            var color=document.getElementById("txtColor").value;
+            document.querySelector("p".innerHTML='Sample Text'.fontcolor(color).fontsize(size));
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Select font size</dt>
+        <dd>
+            <input type="range" onchange="ApplyClick()" value="3" min="1" max="7" id="txtFontSize">
+        </dd>
+        <dt>Select Color</dt>
+        <dd>
+            <input type="color" onchange="ApplyClick()" id="txtColor">
+        </dd>
+    </dl>
+    <button onclick="ApplyClick()">Apply</button>
+    <p></p>
+</body>
+</html>

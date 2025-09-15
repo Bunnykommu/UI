@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyPassword(){
+            var lblMsg=document.getElementById("lblMsg");
+            var password=document.getElementById("txtpwd").value;
+            var regExp=/(?=.*[A-Z])\w{4,10}/;
+            if(password.length==0)
+            lblMsg.innerHTML="Password Required".fontcolor('red');
+        }else {
+            if(password.match(regExp)){
+                lblMsg.innerHTML="Strong Password".fontcolor('green');
+            }else {
+                if(password.length<4){
+                    lblMsg.innerHTMl="poor Password".fontcolor('red');
+                }else {
+                    lblMsg.innerHTML="Weak Password".fontcolor('goldenrod');
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid p-4">
+    <dl class="w-25">
+        <dt>Your password</dt>
+        <dd><input type="password" onkeyup="VerifyPassword()" id="txtPwd" class="form-control"></dd>
+        <dd id="lblMsg"></dd>
+    </dl>
+</body>
+</html>

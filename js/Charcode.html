@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function VerifyName(){
+            var username=document.getElementById("txtName").value;
+            var  lblname=document.getELmentById("txtlblname");
+            if(username.length==0){
+                lblName.innerHTML="Name Required".fontcolor('red').fontsize(2);
+            }else {
+                if(username.length<4){
+                    lblName.innerHTML="Name too short".fontcolor('red').fontsize(2);
+                }else {
+                    if(username.charCodeAt(0)>=65 && username.charAt(0)<=90){
+                        lblName.innerHTML="";
+                    }else {
+                        lblinnerHTML="Name must start with uppercase letter".fontcolor('red'.fontsize(2);)
+                    }
+                }
+            }
+        }
+        function VerifyComments(){
+            var comments=document.getElementById("txtComments").value;
+            var lblComments=document.getElementById("lblComments");
+            lblComments.innerHTML='${100-comments.length} chars left'.fontcolor('red').fontsize(2);
+        }
+        function HideMessage(){
+            document.getElementById("lblComments").innerHtTML="";
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt> Your Name</dt>
+        <dd><input type="text" onkeyup="VerifyName()" onblur="VerifyName()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+        <dt>Your Comments</dt>
+        <dd>
+            <textarea onblur="HideMessage()" id="txtComments" rows="4" onkeyup="VerifyComments()" maxlength="100" cols="40"></textarea>
+        </dd>
+        <dd id="lblComments"></dd>
+    </dl>
+    <button onclick="VerifyName()"></button>
+</body>
+</dl>
+</html>
