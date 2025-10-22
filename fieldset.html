@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .control {
+            display: inline-block;
+            width: 100px;
+            height: 15px;
+            border:1px solid black;
+            padding: 5px;
+            font-size: 20px;
+        }
+        div {
+            font-size: 20px;
+        }
+        fieldset {
+            padding: 20px;
+            margin: 20px;
+            width: 400px;
+            box-shadow: 2px 2px 2px gray;
+            border-left: none;
+            border-right: none;
+        }
+        legend {
+            background-color: black;
+            padding: 5px;
+            width: 120px;
+            text-align: center;
+            color:white;
+            border-radius: 5px;
+        }
+        .group {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin-bottom: 5px;
+        }
+        body {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <div class="group">
+         <span>First Name  </span> <span class="control"></span>
+        </div>
+        <div class="group">
+            <span>Last Name</span>  <span class="control"></span>
+        </div>
+        <div class="group">
+            <span>Age </span> <span class="control"></span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Contact Details</legend>
+        <div class="group">
+        <span>City</span> <span class="control"></span>
+        </div>
+        <div class="group">
+            <span>State </span> <span class="control"></span>
+        </div>
+        <div class="group">
+           <span> Postal Code</span>  <span class="control"></span>
+        </div>
+    </fieldset>
+</body>
+</html>
