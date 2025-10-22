@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        table {
+            font-family: Arial;
+        }
+        .player {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .player-img {
+            width: 100px;
+        }
+        .flag {
+            width: 30px;
+        }
+        .team-name {
+            font-size: 25px;
+        }
+        .col-1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .subtitle {
+            font-size: 40px;
+            font-weight: bold;
+            color:white;
+        }
+        .title {
+            font-size: 20px;
+            color:white;
+        }
+        .bi-dot {
+            font-size: 25px;
+            color:gray;
+        }
+        .sno {
+            font-size: 20px;
+        }
+        td {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <table   width="100%" border="0" cellspacing="0" cellpadding="20" frame="void">
+        <caption>ICC MENS ALLROUNDER RATINGS</caption>
+        <colgroup span="1"></colgroup>
+        <thead bgcolor="#ddd">
+            <tr>
+                <th width="50">Pos</th>
+                <th width="220">Team</th>
+                <th>Players</th>
+                <th>Rating</th>
+                <th>Career Best Rating</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr  height="200" align="center" valign="center">
+                <td align="center"> <span class="sno">01</span> <span class="bi bi-dot"></span> </td>
+                <td>
+                    <img src="/public/india.jpg" class="flag">
+                    <span class="team-name">IND</span>
+                </td>
+                <td background src="/public/icc-logo.jpg">
+                    <div class="player">
+                        <div class="col-1">
+                            <div>
+                                <div class="title">Ravindra</div>
+                                <div class="subtitle">JADEJA</div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <img src="/public/jadeja.jpg" class="player-img">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    409
+                </td>
+                <td>
+                    475 v Bangladesh at Chennai 2024
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <span class="sno">02</span> <span class="bi bi-dot"></span> </td>
+                <td> <img src="/public/bangladesh.png" class="flag"> <span class="team-name">BANGLADESH</span> </td>
+                <td>Mehidy Hasan Miraz</td>
+                <td>305</td>
+                <td>327 v Zimbabwe at Chittagong 2025</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr bgcolor="#dff">
+                <td colspan="5" align="center">&copy; copyright ICC 2025</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

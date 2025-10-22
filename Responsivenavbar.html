@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            border:1px solid black;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav span {
+            margin-right: 20px;
+        }
+        .bi-justify {
+            font-size: 24px;
+        }
+        @media screen and (orientation: landscape) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            .toggler-icon {
+                display: none;
+            }
+        }
+        @media screen and (orientation: portrait){
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            .toggler-icon {
+                display: inline;
+            }
+            .menu {
+                display: none;
+            }
+            .shortcuts {
+                display: none
+            }
+        }
+    </style>
+</head>
+<body>    <nav>
+
+        <div class="toggler-icon">
+            <button class="bi bi-justify"></button>
+        </div>
+        <div class="brand">Shopper.</div>
+        <div class="menu">
+            <span>Home</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Docs</span>
+            <span>Blog</span>
+        </div>
+        
+        <div class="shortcuts">
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-cart4"></span>
+        </div>
+    </nav>
+</body>
+</html>
+

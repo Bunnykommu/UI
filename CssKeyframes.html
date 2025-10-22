@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        @keyframes Spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        img {
+            animation-name: Spin;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        img:hover {
+            animation-duration: 1s;
+        }
+     </style>
+</head>
+<body>
+    <div>
+       <img src="/public/fan.jpg" width="300" height="300">
+    </div>
+</body>
+</html>
+
+

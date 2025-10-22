@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        form {
+            border : 1px solid gray;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            font-family: Arial;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-control {
+            width: 90%;
+            font-size: 20px;
+        }
+        .btn-register {
+            width: 90%;
+            padding: 5px;
+            background-color: gold;
+            font-size: 20px;
+            border:none;
+        }
+        #UserName+div {
+            display: none;
+        }
+        #UserName:focus+div {
+            display: block;
+            color:red;
+            font-size: 12px;
+        }
+        #UserName:focus {
+            outline: none;
+            border:2px solid goldenrod;
+            background-color: rgb(246, 246, 204);
+        }
+        #UserName:read-only {
+            cursor: not-allowed;
+            background-color: lightgray;
+        }
+        button:hover {
+            background-color: rgb(244, 229, 146);
+            cursor: grab;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active {
+            color:red;
+        }
+        #terms+label {
+            color:red;
+        }
+        #terms:checked+label {
+            color:green;
+        }
+        #terms~button {
+            display: none;
+        }
+        #terms:checked~button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+       <h3 class="bi bi-person-circle"> Register User </h3>
+       <div class="form-group">
+           <label class="form-label" for="UserName"> User Name </label>
+           <div>
+             <input type="text" id="UserName" readonly value="JOHN" placeholder="Name in Block Letters" class="form-control" name="UserName">
+             <div>Name in Block Letters</div>
+           </div>
+       </div>
+       <div class="for-group">
+           <label class="form-label" for="Password"> Password </label>
+           <div>
+             <input type="password" class="form-control" name="Password">
+           </div>
+       </div>
+       <div class="form-group">
+           <label class="form-label" for="City"> Your City </label>
+           <div>
+             <select class="form-control">
+                <option>Choose City</option>
+                <option>Delhi</option>
+                <option>Hyd</option>
+             </select>
+           </div>
+       </div>
+       <div class="form-group">
+            <label class="form-label">Terms of Service</label>
+            <textarea rows="4" disabled cols="27"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ducimus dolor porro fugiat eaque omnis error perspiciatis unde nesciunt blanditiis fugit, excepturi labore sint molestiae, itaque, facere asperiores voluptatum qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam mollitia quis voluptatem quas fugiat laborum sit recusandae at perferendis autem est odio aliquam, exercitationem laboriosam expedita eligendi quisquam ea natus.</textarea>
+            <div>
+                <input type="checkbox" id="terms"> <label>I Accept</label>
+                <br><br>
+                <button class="btn-register">Register</button>
+            </div>
+       </div>
+       <div class="form-group">
+            <a href="#"> Forgot Password ? </a>
+       </div>
+    </form>
+</body>
+</html>

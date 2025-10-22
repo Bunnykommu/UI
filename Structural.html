@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+            font-size: 24px;
+            font-family: Arial;
+            display: flex;
+        }
+        li::after {
+            content: " > ";
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+            color:gray;
+        }
+        li:last-child::after {
+            content: "";
+        }
+        li span {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;   
+        }
+        p::selection {
+            background-color: yellow;
+            text-decoration: underline red wavy 4px;
+            color:red;
+            font-size: 24px;
+        }
+        input::placeholder {
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li > <span class="bi bi-house-door"></span> </li>
+        <li>Electronics</li>
+        <li>Mobiles</li>
+        <li>Apple</li>
+        <li>iPhone</li>
+        <li>16 Pro</li>
+    </ul>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quibusdam. Accusantium excepturi odio sequi? A itaque, debitis quam ad dolor, nulla culpa reiciendis nisi omnis ut alias quaerat qui repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum possimus reiciendis quia deserunt, eveniet, fugit odit aliquam doloribus optio cum harum nam dolorem! Explicabo impedit, iure culpa voluptatibus maiores earum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex autem fuga soluta magni tempore architecto non amet nesciunt, dolor aliquid facere repudiandae hic quod doloremque corrupti maiores eum quo quaerat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat magnam itaque est consequatur pariatur sapiente magni aspernatur, neque ducimus quisquam sit blanditiis voluptatum, saepe suscipit voluptate maiores dolor deserunt impedit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias delectus suscipit id maiores quidem consequatur voluptates unde, sunt sed, odio aperiam esse inventore ex mollitia nisi, tempora numquam laboriosam facilis!</p>
+    </div>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" placeholder="Name in Block Letters"></dd>
+    </dl>
+</body>
+</html>

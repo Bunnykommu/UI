@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        .content-section {
+            height: 500px;
+            overflow: auto;
+        }
+        header {
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding: 5px;
+        }
+        ul {
+            list-style: none;
+            margin-left: -40px;
+        }
+        li {
+            font-size: 16px;
+            font-family: Arial;
+            margin-bottom: 20px;
+            background-color: black;
+            color:white;
+            width: 130px;
+            padding: 5px;
+        }
+        a {
+            color:white;
+            text-decoration: none;
+        }
+        .header-nav img {
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopper</h1>
+        <div class="header-nav">
+            <a href="#women"><img src="/public/women-fashion.jpg" width="50" height="50"></a>
+            <a href="#men"><img src="/public/men-fashion.jpg" width="50" height="50"></a>
+            <a href="#kids"><img src="/public/kids-fashion.jpg" width="50" height="50"></a>
+        </div>
+    </header>
+    <section>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#women">Women Fashion</a></li>
+            <li><a href="#men">Men Fashion</a></li>
+            <li><a href="#kids">Kids Fashion</a></li>
+          </ul>
+        </nav>
+        <div class="content-section">
+            <h3 id="home">Home</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi inventore fugit beatae consequuntur velit, voluptatem autem, minus deserunt cupiditate fugiat quas nemo, rem ipsa unde fuga recusandae minima impedit rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore est sint veritatis, expedita placeat debitis eos eligendi magnam, consectetur quibusdam iste praesentium aut a. Ipsum consequatur dolorum dignissimos est libero.</p>
+             <h3 id="women">Women Fashion</h3>
+             <img src="/public/women-fashion.jpg" width="200" height="200">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi inventore fugit beatae consequuntur velit, voluptatem autem, minus deserunt cupiditate fugiat quas nemo, rem ipsa unde fuga recusandae minima impedit rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore est sint veritatis, expedita placeat debitis eos eligendi magnam, consectetur quibusdam iste praesentium aut a. Ipsum consequatur dolorum dignissimos est libero.</p>
+            <h3 id="men">Men Fashion</h3>
+             <img src="/public/men-fashion.jpg" width="200" height="200">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi inventore fugit beatae consequuntur velit, voluptatem autem, minus deserunt cupiditate fugiat quas nemo, rem ipsa unde fuga recusandae minima impedit rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore est sint veritatis, expedita placeat debitis eos eligendi magnam, consectetur quibusdam iste praesentium aut a. Ipsum consequatur dolorum dignissimos est libero.</p>
+            <h3 id="kids">Kids Fashion</h3>
+             <img src="/public/kids-fashion.jpg" width="200" height="200">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi inventore fugit beatae consequuntur velit, voluptatem autem, minus deserunt cupiditate fugiat quas nemo, rem ipsa unde fuga recusandae minima impedit rerum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore est sint veritatis, expedita placeat debitis eos eligendi magnam, consectetur quibusdam iste praesentium aut a. Ipsum consequatur dolorum dignissimos est libero.</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .user {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+        <dt>User Name</dt>
+            <dd>
+                <input type="text" placeholder="Your name" class="user">
+            </dd>
+            <dt>Select Product</dt>
+            <dd>
+                <select name="product" >
+                    <option>Select Product</option>
+                    <optgroup label="Electronics">
+                        <option>Televisions</option>
+                        <option value="ELEMOB001">Mobiles</option>
+                        <option selected>Watches</option>
+                    </optgroup>
+                    <optgroup label="Footwear">
+                        <option>Casuals</option>
+                        <option disabled>Sneakers</option>
+                        <option>Boots</option>
+                    </optgroup>
+                </select>
+            </dd>
+        </dl>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            padding: 10px;
+            font-family: Arial;
+            font-size: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bi-justify {
+            font-size: 28px;
+        }
+        .search-area {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .search-bar {
+            width: 400px;
+            border:1px solid gray;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .bi-mic-fill {
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            background-color: rgb(223, 221, 221);
+            padding: 5px;
+            border-radius: 25px;
+            margin-left: 30px;
+        }
+        .signin {
+            border: 1px solid blue;
+            padding: 5px;
+            border-radius: 20px;
+            color:blue;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+        }
+        .nav-item {
+            text-align: center;
+            margin-left: -50px;
+            margin-bottom: 50px;
+        }
+        main {
+            padding-top: 20px;
+            height: 500px;
+            overflow: auto;
+        }
+        article {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        article img {
+            width: 100%;
+        }
+        article h1 {
+            font-size: 30px;
+            font-family: Arial;
+        }
+        .channel-nav {
+            font-size: 20px;
+            font-family: Arial;
+            color:gray;
+            font-weight: bold;
+            border-bottom: 1px solid gray;
+            padding-bottom: 20px;
+        }
+        .channel-nav span {
+            margin-right: 30px;
+        }
+        .videos {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        }
+        .card {
+            width: 200px;
+        }
+        .videos iframe {
+            width: 100%;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div>
+        <span class="bi bi-justify"></span>
+        <img src="/public/youtube-logo.img" width="100">
+    </div>
+    <div class="search-area">
+        <div class="search-bar">
+            <span>Search</span>
+            <span class="bi bi-search"></span>
+        </div>
+        <span class="bi bi-mic-fill"></span>
+    </div>
+    <div>
+        <span class="bi bi-three-dots-vertical"></span>
+        <span class="signin"> <span class="bi bi-person-circle"></span> Signin </span>
+    </div>
+  </header>
+  <section>
+     <nav>
+        <div class="nav-item">
+            <span class="bi bi-house-door"></span>
+            <p>Home</p>
+        </div>
+        <div class="nav-item">
+            <span class="bi bi-youtube"></span>
+            <p>Home</p>
+        </div>
+        <div class="nav-item">
+            <span class="bi bi-clock-history"></span>
+            <p>Home</p>
+        </div>
+     </nav>
+     <main>
+        <img src="/public/channel-banner.img" width="90%">
+        <article>
+        <div>
+            <img src="/public/nit-logo.img">
+        </div>
+        <div>
+            <h1>Naresh i Technologies</h1>
+        </div>
+         </article>
+         <div class="channel-nav">
+            <span>Home</span>
+            <span>Videos</span>
+            <span>Shorts</span>
+            <span>Live</span>
+            <span>Playlists</span>
+            <span>Posts</span>
+         </div>
+         <div class="videos">
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/uspNXYdKEh8&quot; class="video-card"></iframe>
+            </div>
+             <div class="card">
+                <iframe src="https://www.youtube.com/embed/ZKCQA8VOERo&quot; class="video-card"></iframe>
+            </div>
+             <div class="card">
+                <iframe src="https://www.youtube.com/embed/uspNXYdKEh8&quot; class="video-card"></iframe>
+            </div>
+             <div class="card">
+                <iframe src="https://www.youtube.com/embed/ZKCQA8VOERo&quot; class="video-card"></iframe>
+            </div>
+             <div class="card">
+                <iframe src="https://www.youtube.com/embed/uspNXYdKEh8&quot; class="video-card"></iframe>
+            </div>
+         </div>
+     </main>
+  </section>  
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" media="screen">
+       .ticket {
+         border: 3px double red;
+         padding: 20px;
+         background-color: yellow;
+       }
+       dt {
+        background-color: green;
+        color:white;
+        padding: 5px;
+       }
+       aside {
+        border : 3px solid red;
+        width: 200px;
+       }
+    </style>
+    <style type="text/css" media="print">
+        .ticket {
+            border:none;
+            background-color: none;
+        }
+        aside {
+            display: none;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        dt {
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+   <div class="ticket">
+     <aside>
+        <h3>Ads.</h3>
+        <img src="/public/a1.jpg" width="200" height="200">
+     </aside>
+      <h1>Your ticket</h1>
+      <dl>
+        <dt>Departure</dt>
+        <dd>Hyderabad</dd>
+        <dt>Arrival</dt>
+        <dd>Delhi</dd>
+      </dl>
+   </div>
+</body>
+</html>
