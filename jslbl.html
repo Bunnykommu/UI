@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AddClick(){
+            user = prompt('Enter User Name');
+            if(user==null){
+                alert('Add Canceled');
+            } 
+            else if(user=='') {
+                alert('Please provider user name');
+            } else {
+                document.querySelector("p").innerHTML += user + "<br>";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid p-5">
+    <button onclick="AddClick()" class="btn btn-warning bi bi-person-add"> Add User </button>
+    <p class="fs-4 my-3 text-danger"></p>
+</body>
+</html>

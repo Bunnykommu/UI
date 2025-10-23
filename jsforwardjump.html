@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+
+        function VerifyCard(){
+
+            var card = document.getElementById("txtCard").value;
+
+            if(card==="4444555566667890"){
+
+                document.getElementById("txtCvv").disabled =false;
+
+                document.getElementById("cvvContainer").style.display = "block";
+
+            }
+
+        }
+
+        function VerifyCvv(){
+
+            var cvv = document.getElementById("txtCvv").value;
+
+            if(cvv==="345"){
+
+                document.getElementById("lstExpiry").disabled = false;
+
+                document.getElementById("expiryContainer").style.display = "block";
+
+            }
+
+        }
+
+        function VerifyExpiry(){
+
+            var expiry = document.getElementById("lstExpiry").value;
+
+            if(expiry==="2026"){
+
+                document.getElementById("btnPay").disabled = false;
+
+                document.getElementById("btnPay").style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <fieldset>
+
+        <legend>Payment Details</legend>
+
+        <dl>
+
+            <dt>Card Number</dt>
+
+            <dd><input type="text" onblur="VerifyCard()" id="txtCard"></dd>
+
+            <div id="cvvContainer" style="display: none;">
+
+                <dt>Cvv</dt>
+
+                <dd><input type="text" onblur="VerifyCvv()" disabled id="txtCvv" size="4"></dd>
+
+            </div>
+
+            <div id="expiryContainer" style="display: none;">
+
+                <dt>Epiry</dt>
+
+                <dd>
+
+                    <select id="lstExpiry" onchange="VerifyExpiry()" disabled>
+
+                        <option>Select Expiry</option>
+
+                        <option>2025</option>
+
+                        <option>2026</option>
+
+                        <option>2027</option>
+
+                    </select>
+
+                </dd>
+
+            </div>
+
+        </dl>
+
+        <button style="display: none;" disabled id="btnPay">Pay</button>
+
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+<script>
+     function GetMail(email){
+         var [email_id, domain] = email.split('@');
+         document.write(`Your Id <b>${email_id}</b> registered at <b>${domain}</b>`);
+     } 
+    GetMail(prompt("Enter your email"));
+</script>

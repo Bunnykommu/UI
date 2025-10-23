@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+
+        function VerifyName(){
+
+            var uname = document.getElementById("txtName").value;
+
+            document.getElementById("btnSubmit").disabled = (uname.length>0)?false:true;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <dl>
+
+        <dt>User Name</dt>
+
+        <dd><input type="text" onkeyup="VerifyName()" id="txtName"></dd>
+
+    </dl>
+
+    <button id="btnSubmit" disabled>Submit</button>
+
+</body>
+
+</html>
