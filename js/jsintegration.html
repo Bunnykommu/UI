@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function RegisterClick(){
+             // Your logic
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <button data-bs-target="#register" data-bs-toggle="modal" class="btn btn-primary mt-2">Register</button>
+    <div class="modal fade" id="register">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="bi bi-person-circle"> Register User</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="my-2">
+                        <input type="text" id="txtName" placeholder="User Name" class="form-control">
+                    </div>
+                     <div class="my-2">
+                        <input type="email" id="txtEmail" placeholder="Email" class="form-control">
+                    </div>
+                      <div class="my-2">
+                        <input type="date" id="txtDob"  class="form-control">
+                    </div>
+                     <div class="my-2">
+                        <input type="radio" name="gender" value="Male" class="form-check-input"> <label class="form-check-label">Male</label>
+                        <input type="radio" name="gender" value="Female" class="form-check-input"> <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-bs-dismiss="modal"> Register </button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal"> Cancel </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

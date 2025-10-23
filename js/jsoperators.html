@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var itemsCount = 0;
+        function AddClick(){
+            itemsCount++;
+            document.querySelector("p").innerHTML = itemsCount + " Items in Cart";
+        }
+        function RemoveClick(){
+            itemsCount--;
+            document.querySelector("p").innerHTML = itemsCount + " Items in Cart";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="AddClick()" class="bi bi-cart4"></button>
+    <button onclick="RemoveClick()" class="bi bi-trash"></button>
+    <p></p>
+</body>
+</html>

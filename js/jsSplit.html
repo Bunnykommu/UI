@@ -1,0 +1,7 @@
+<script>
+    var contactsCsv = "John-99833223212, David-90833223210";
+    var contacts = contactsCsv.split(',');
+    var [john, david] = contacts;
+    var [jname, jmobile] = john.split('-');
+    document.write(`Name=${jname}<br>Mobile=${jmobile}`);
+</script>

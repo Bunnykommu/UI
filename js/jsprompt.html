@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+             document.getElementById("lblCategory").textContent = prompt("Enter Category");
+             document.getElementById("lblProduct").textContent = prompt("Enter Product");
+             document.getElementById("lblBrand").textContent = prompt("Enter Brand");
+        }
+    </script>
+    <style>
+        dl {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        dt, dd {
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: black;
+            color:white;
+        }
+        dd {
+            background-color: lightgrey;
+            color:black;
+        }
+    </style>
+</head>
+<body onload="bodyload()"
+    <h2>Product Search</h2>
+    <dl>
+        <dt>Category</dt>
+        <dd id="lblCategory"></dd>
+        <dt>Product</dt>
+        <dd id="lblProduct"></dd>
+        <dt>Brand</dt>
+        <dd id="lblBrand"></dd>
+    </dl>
+</body>
+</html>

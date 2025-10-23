@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bodyload(){
+            document.querySelector("img").src = "/public/women-fashion.jpg";
+            document.querySelector(".btn-login").value = "Login";
+            document.querySelector("#btnRegister").value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="100"  height="100" border="1">
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h3>Login</h3>
+            Name <input type="text"> <input class="btn-login" type="button">
+        </form>
+    </div>
+     <div>
+        <form name="frmRegister">
+            <h3>Register</h3>
+            Name <input type="text"> <br>
+            Email <input type="email"> <br>
+            <input type="button" id="btnRegister">
+        </form>
+    </div>
+</body>
+</html>

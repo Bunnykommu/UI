@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+
+        function StockChange(){
+
+            var stockcheckbox = document.getElementById("optStock");
+
+
+
+            document.getElementById("lblStock").textContent = (stockcheckbox.checked===true)? "Available" : "Out of Stock";
+
+        }
+
+        function SortClick(){
+
+            var sorticon = document.getElementById("sortIcon");
+
+            sorticon.className = (sorticon.className==="bi bi-sort-alpha-down")? "bi bi-sort-alpha-up": "bi bi-sort-alpha-down";
+
+        }
+
+        function LikeClick(){
+
+            var hearticon = document.getElementById("hearticon");
+
+            hearticon.className = (hearticon.className==="bi bi-heart")? "bi bi-heart-fill": "bi bi-heart";
+
+        }
+
+    </script>
+
+</head>
+
+<body class="container-fluid p-4">
+
+    <input type="checkbox" onchange="StockChange()" id="optStock"> <label id="lblStock"> Out of Stock </label>
+
+    <div class="mt-5">
+
+        <button onclick="SortClick()" class="btn btn-primary"> <span id="sortIcon" class="bi bi-sort-alpha-down"></span> </button>
+
+    </div>  
+
+    <div class="mt-3">
+
+        <button class="btn" onclick="LikeClick()">
+
+            <span id="hearticon" class="bi bi-heart"></span>
+
+        </button>
+
+    </div>
+
+</body>
+
+</html>

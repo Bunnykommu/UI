@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VerifyName(){
+            var username = document.getElementById("txtName").value; 
+            var lblName = document.getElementById("lblName");
+            if(username.length==0){
+                lblName.innerHTML = "Name Required".fontcolor('red').fontsize(2);
+            } else {
+                if(username.length<4){
+                    lblName.innerHTML = "Name too short".fontcolor('red').fontsize(2);
+                } else {
+                    if(username.charCodeAt(0)>=65 && username.charCodeAt(0)<=90){
+                         lblName.innerHTML ="";
+                    } else {
+                         lblName.innerHTML = "Name must start with uppercase letter".fontcolor('red').fontsize(2);
+                    }
+                }
+            }
+        }
+        function VerifyComments(){
+            var comments = document.getElementById("txtComments").value;
+            var lblComments = document.getElementById("lblComments");
+            lblComments.innerHTML = `${100-comments.length} chars left`.fontcolor('red').fontsize(2);
+        }
+        function HideMessage(){
+            document.getElementById("lblComments").innerHTML = "";
+        }
+        function VerifyEmail(){
+            var email = document.getElementById("txtEmail").value;
+            var lblEmail = document.getElementById("lblEmail");
+            if(email.indexOf("@")==-1){
+                lblEmail.innerHTML = "Invalid Email : Please include @".fontcolor('red').fontsize(2);
+            } else {
+                if(email.indexOf("@")>=0 && email.indexOf("@")<=2){
+                    lblEmail.innerHTML = "Invalid Email : email requires min 2 chars".fontcolor('red').fontsize(2);
+                } else {
+                    if(email.endsWith("outlook.com")){
+                         lblEmail.innerHTML = "";
+                    } else {
+                         lblEmail.innerHTML = "Invalid Microsoft Account: Please provide only microsoft email".fontcolor('red').fontsize(2);
+                    }
+                }
+            }
+        }
+        function VerifyCard(){
+            var card = document.getElementById("txtCard").value;
+            var imgCard = document.getElementById("imgCard");
+            if(card.startsWith("4455")){
+                imgCard.src = "/public/visa.jpg";
+            } else {
+                 imgCard.src = "/public/master.jpg";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    <dl class="w-25">
+        <dt>Your Name</dt>
+        <dd><input class="form-control" type="text" onkeyup="VerifyName()" onblur="VerifyName()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+        <dt>Your Card </dt>
+        <dd class="input-group">
+            <input type="text" maxlength="16" onkeyup="VerifyCard()" class="form-control" id="txtCard">
+            <span class="input-group-text"><img width="40" id="imgCard"></span>
+        </dd>
+        <dt>Email</dt>
+        <dd><input type="text" class="form-control" onblur="VerifyEmail()" id="txtEmail"></dd>
+        <dd id="lblEmail"></dd>
+        <dt>Your Comments</dt>
+        <dd>
+            <textarea class="form-control" onblur="HideMessage()" id="txtComments" rows="4" onkeyup="VerifyComments()" maxlength="100" cols="40"></textarea>
+        </dd>
+        <dd id="lblComments"></dd>
+    </dl>
+    <button class="btn btn-warning" onclick="VerifyName()">Submit</button>
+</body>
+</html>
